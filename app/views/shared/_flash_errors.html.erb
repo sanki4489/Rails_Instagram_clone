@@ -1,0 +1,28 @@
+<% if flash.any? %>
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>
+<% end %>  
+
+<%
+=begin%>
+ <% if flash.any? %>
+      <script type="text/javascript">
+        <% flash.each do |key, value| %>
+          <% type = key.to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+          toastr.<%= type %>('<%= value %>')
+        <% end %>
+      </script>
+<% end %> 
+<%
+=end%>
+  
+
+  <%# YYrEv8RyQVMKrZUqlPMOLU1xa  api key%>
+  <%# tQFcSp06qdLtG6iou4b2rZHYmnNkd8KxPVJ4zgUCf0fY581Yhj api key secret%>
+  <%# AAAAAAAAAAAAAAAAAAAAAHzVXAEAAAAAReJ0iV3zxxQzQVhiGZmuBdvPDnw%3DQ3ouDevqPok9kyuXvUlIsrNC37YWuqQeqFQhXDnEWuAt9bzkDH  -bearer token%>
+
+
+
+  <%# LUNIMDBUM01HemprZ3pPVWptakw6MTpjaQ client id%>
+  <%# r3CORITEjSq48dgMVGQ7nQ4T-u10dOFarVTQfu7vLOftVtgLlL  client secret%>
+  <%# r3CORITEjSq48dgMVGQ7nQ4T-u10dOFarVTQfu7vLOftVtgLlL %>
